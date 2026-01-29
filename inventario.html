@@ -10,12 +10,22 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    .img-product {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tienda</a>
+      <a class="navbar-brand" href="#"><i class="bi bi-shop"></i> Tienda</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,40 +33,33 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link " href="index.html">Home</a>
+            <a class="nav-link " href="index.html"><i class="bi bi-house-door"></i> Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="inventario.html">Inventario</a>
+            <a class="nav-link active" aria-current="page" href="inventario.html"><i class="bi bi-journal-text"></i> Inventario</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="productos.html">Crear productos</a>
+            <a class="nav-link" href="productos.html"><i class="bi bi-plus-circle"></i> Crear Productos</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </div>
   </nav>
-  <main>
-    <div class="container mt-5">
-      <div class="d-flex justify-content-betweeen aling-items-center mb-4">
+  <main class="container mt-5 flex-grow-1">
+    
+      <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Listado de Inventario</h1>
         <a href="productos.html" class="btn btn-primary">
-          <i class="bi bi-plus-lg"></i> + Nuevo Producto
+          <i class="bi bi-plus-lg"></i> Nuevo Producto
         </a>
       </div>
-    </div>
 
     <div class="table-responsive">
-      <table class="table table-striped table-hover table-bordered">
+      <table class="table table-striped table-hover table-bordered align-middle">
         <thead class="table-dark">
           <tr>
             <th scope="col"># ID</th>
-            <TH scope="col">Imagen</TH>
+            <th scope="col">Imagen</th>
             <th scope="col">Nombre del Producto</th>
             <th scope="col">Categoría</th>
             <th scope="col">Precio</th>
@@ -72,16 +75,15 @@
             <td>
               <img src="https://imgs.search.brave.com/anSbOS5_agnN8wEG_IAHpGn8jbtv6ocyOIGBq4MENgk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmVi/YXlpbWcuY29tL2lt/YWdlcy9nL1AyQUFB/ZVN3UnY5cFBialov/cy1sNDAwLndlYnA"
                 alt="Pantalon Baggy"
-                class="img-fluid rounded"
-                style="max-width: 80px; height: auto;">
+                class="img-fluid rounded img-product">
             </td>
             <td>Playera SpiderMan</td>
             <td>Playera</td>
             <td>$ 450</td>
             <td><span class="badge text-bg-success">10 u.</span></td>
             <td>
-              <button class="btn btn-sm btn-warning">Editar</button>
-              <button class="btn btn-sm btn-danger">Eliminar</button>
+              <button class="btn btn-sm btn-warning"><i class="bi bi-pencil-square"></i></button>
+              <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
             </td>
           </tr>
 
@@ -90,16 +92,15 @@
             <td>
               <img src="https://imgs.search.brave.com/hfjvtPk5PI-tetb690k018-CcghRdWMnQG1ZxqLIJXo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wYW50/YWxvbmVzZGVtZXpj/bGlsbGEubXgvY2Ru/L3Nob3AvZmlsZXMv/UGFudGFsb25lcy1k/ZS1tZXpjbGlsbGEt/cm90b3MtYmxhbmNv/cy1iYWdneS1qZWFu/cy1wYXJhLW11amVy/XzJfZjM3YzE1NzUt/Yjg4Ni00ODgyLThm/NjktYjdhN2ZhYTE0/MjY1LmpwZz92PTE3/MzM1OTM0MTAmd2lk/dGg9NTMz"
                 alt="Pantalon Baggy"
-                class="img-fluid rounded"
-                style="max-width: 80px; height: auto;">
+                class="img-fluid rounded img-product">
             </td>
             <td>Pantalon baggy</td>
             <td>Pantalon</td>
             <td>$ 600</td>
             <td><span class="badge text-bg-success">5 u.</span></td>
             <td>
-              <button class="btn btn-sm btn-warning">Editar</button>
-              <button class="btn btn-sm btn-danger">Eliminar</button>
+              <button class="btn btn-sm btn-warning"><i class="bi bi-pencil-square"></i></button>
+              <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
             </td>
           </tr>
 
@@ -108,16 +109,15 @@
             <td>
               <img src="https://imgs.search.brave.com/6-gJFbgK3pB3ReSRoi2y2bmxVRM9DtVRLvqPTWZ4nZQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzY0MjY5OS1NTE02/OTk0ODY0MDc4MV8w/NjIwMjMtRS1wbGF5/ZXJhLWNhbWlzYS1z/cGlkZXJtYW4taG9t/YnJlLWFyYW5hLWJs/YWNrLWF2ZW5nZXJz/LWxpY3JhLndlYnA"
                 alt="Playera Venom"
-                class="img-fluid rounded"
-                style="max-width: 80px; height: auto;">
+                class="img-fluid rounded img-product">
             </td>
             <td>Playera Venom</td>
             <td>Playera</td>
             <td>$ 450</td>
             <td><span class="badge text-bg-success">8 u.</span></td>
             <td>
-              <button class="btn btn-sm btn-warning">Editar</button>
-              <button class="btn btn-sm btn-danger">Eliminar</button>
+              <button class="btn btn-sm btn-warning"><i class="bi bi-pencil-square"></i></button>
+              <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
             </td>
           </tr>
 
@@ -126,16 +126,15 @@
             <td>
               <img src="https://imgs.search.brave.com/NuUI3iFjm-pixdxdAxGV7rxsotpEoz1OBJ7zAJVUQ2Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMubmlrZS5jb20v/YS9pbWFnZXMvdF93/ZWJfcHdfNTkyX3Yy/L2ZfYXV0by84ZDVm/OGNiMC00ZDBlLTQ1/NmEtYmU4Yy01Zjc2/MjhhMWFiYWQvVStO/SytNTFRQTElFUitO/UysyUFIrLSsxNDQu/cG5n"
                 alt="Calcetines Nike"
-                class="img-fluid rounded"
-                style="max-width: 80px; height: auto;">
+                class="img-fluid rounded img-product">
             </td>
             <td>Calcetines Nike</td>
             <td>Calcetines</td>
             <td>$ 250</td>
             <td><span class="badge text-bg-success">10 u.</span></td>
             <td>
-              <button class="btn btn-sm btn-warning">Editar</button>
-              <button class="btn btn-sm btn-danger">Eliminar</button>
+              <button class="btn btn-sm btn-warning"><i class="bi bi-pencil-square"></i></button>
+              <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
             </td>
           </tr>
 
@@ -143,8 +142,8 @@
       </table>
     </div>
   </main>
-  <footer>
-    <!-- place footer here -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="mb-0">&copy; 2026 Tienda de Ropa. Todos los derechos reservados.</p>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

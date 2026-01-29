@@ -9,6 +9,9 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <meta
+      name="description"
+      content="Sistema de tienda de ropa para gestionar inventario y productos.">
     <!-- Bootstrap CSS v5.2.1 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -16,12 +19,18 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
   </head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Tienda</a>
+        <a class="navbar-brand" href="#"><i class="bi bi-shop"></i> Tienda</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -36,51 +45,48 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door"></i> Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
+              <a class="nav-link" href="inventario.html"><i class="bi bi-journal-text"></i> Inventario</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="productos.html"><i class="bi bi-plus-circle"></i> Crear Productos</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
-    <main></main>
-    <footer>
-      <!-- place footer here -->
+    <main class="flex-grow-1">
+      <!-- Index de la tienda de ropa -->
+      <div class="container mt-4 text-center">
+        <div class="jumbotron">
+          <h1 class="display-4">Bienvenido a la Tienda de Ropa</h1>
+          <p class="lead">
+            Gestiona tu inventario y productos de manera eficiente.
+          </p>
+          <hr class="my-4" />
+          <p>
+            Utiliza el menú de navegación para acceder al inventario y a la
+            gestión de productos.
+          </p>
+          <!-- Imagen de la tienda -->
+          <div class="text-center">
+            <img
+              src="https://imgs.search.brave.com/Gwmf7PEyrwinbwSBaxCwv4nHgUcTJGZj75fMVzlMHlA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMzkv/NDM0LzEyMy9zbWFs/bC9tb2Rlcm4tYm91/dGlxdWUtd2l0aC1j/b2xvcmZ1bC10LXNo/aXJ0LWFuZC1zdHls/aXNoLWFjY2Vzc29y/aWVzLWVtcHR5LWNs/b3RoaW5nLXN0b3Jl/LWZpbGxlZC13aXRo/LW5ldy1mYXNoaW9u/LWNvbGxlY3Rpb24t/YW5kLWZhc2hpb25h/YmxlLWNsb3RoZXMt/d2FpdGluZy1mb3It/Y3VzdG9tZXJzLXRv/LWNvbWUtYW5kLXNo/b3AtcGhvdG8uanBn"
+              class="img-fluid my-4 rounded shadow-lg"
+              alt="Tienda de Ropa"
+            />
+          </div>
+          <div class="text-center">
+            <a class="btn btn-primary btn-lg mt-4 shadow" href="inventario.html" role="button"
+              >Ver Inventario</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p class="mb-0">&copy; 2026 Tienda de Ropa. Todos los derechos reservados.</p>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script
